@@ -116,17 +116,17 @@ public class SecurityConfig {
 //        authenticationProvider.setUserDetailsService(new InMemoryUserDetailsManager());
 //        return authenticationProvider;
 //    }
-
-    @Bean
-    // for DaoAuthenticationProvider
-    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder, CredentialProperties credentialProperties) {
-        var user = User.builder()
-                .username(credentialProperties.username())
-                .password(passwordEncoder.encode(credentialProperties.password()))
-                .roles(credentialProperties.roles())
-                .build();
-        return new InMemoryUserDetailsManager(user);
-    }
+//
+//    @Bean
+//    // for DaoAuthenticationProvider
+//    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder, CredentialProperties credentialProperties) {
+//        var user = User.builder()
+//                .username(credentialProperties.username())
+//                .password(passwordEncoder.encode(credentialProperties.password()))
+//                .roles(credentialProperties.roles())
+//                .build();
+//        return new InMemoryUserDetailsManager(user);
+//    }
 
 }
 
