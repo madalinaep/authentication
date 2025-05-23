@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      tags:
+        - authorization-server
+#    image: authorization-server
+    container_name: authorization-server
+    ports:
+      - "8081:8081"
